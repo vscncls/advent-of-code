@@ -12,16 +12,14 @@ def find_matching_sum(numbers: list[int], target: int) -> tuple[int, int]:
     sorted_numbers = sorted(numbers)
     for number_index in range(len(numbers)):
         for potential_match_index in range(number_index, len(numbers)):
-            if (
-                sorted_numbers[number_index] + sorted_numbers[potential_match_index]
-                == target
-            ):
+            if sorted_numbers[number_index] + sorted_numbers[potential_match_index] == target:
                 return (
                     sorted_numbers[number_index],
                     sorted_numbers[potential_match_index],
                 )
 
     raise Exception("Match not found.")
+
 
 TARGET = 2020
 

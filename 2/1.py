@@ -20,9 +20,7 @@ def get_input() -> list[Input]:
     with open("./input.txt", "r") as file:
         raw_data = file.read()
     raw_data_by_line = raw_data.split("\n")
-    raw_data_by_line_separated = [
-        line.split(" ") for line in raw_data_by_line if len(line) > 0
-    ]
+    raw_data_by_line_separated = [line.split(" ") for line in raw_data_by_line if len(line) > 0]
 
     result = []
     for line in raw_data_by_line_separated:
